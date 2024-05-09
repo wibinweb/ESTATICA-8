@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="Es">
+<head>
+  <title>And Up</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:100italic' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="website icon" href="IMG/25.jpg">
+  <script>var ml = { timelines: {}};</script>
+  <link rel="stylesheet" href="Estilos.css">
+  <link rel="stylesheet" href="Normalize.css">
+  <link rel="stylesheet" href="Scroll.css">
+</head>
+<body>
+<div class="ml11">
+  <h1 class="letters"></h1>
+</div>
+<header>
+  <div class="Contendor">
+    <div class="text-wrapper ml11">
+      <div class="line line1 hadding"></div>
+      <div class="had">
+        <h1 class="had-r1">WAKE<span class="amp">UP</span></h1>
+      </div>
+    </div>
+  </div>
+  <nav class="Motivation">
+    <div>
+      <p>BUILD</p>
+    </div>
+    <div>
+      <h2>YOUR</h2>
+    </div>
+    <div>
+      <p>REALLITY</p>
+    </div>
+  </nav>
+</header>
+<div class="page">
+  <div class="container">
+    <div class="left">
+      <p class="login">NEWSLETTER</p>
+      <p class="eula">Subcribe to our Newsletter. By logging in you agree to the ridiculously long terms that you didnt bother to read</p>
+      <a href="index2.html" class="Terms" target="blank">TERMS</a>
+    </div>
+    <div class="right">
+      <form action="" method="get">
+        <div class="form" >
+          <p>Email</p>
+          <input name="email" type="email" class="email" placeholder="Ingresa tu email">
+          <input type="submit" class="submit" value="SUBMIT">
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<article class="ContenidoArticle">
+  <div class="NavArticle">
+    <div class="Caja">
+      <a href="index3.html">INFO</a>
+    </div>
+    <div class="Caja">
+      <a href="index.html">MENU</a>
+    </div>
+    <div class="Caja">
+      <a href="index4.html" target="blank">MERCH</a>
+    </div>
+  </div>
+  <div class="YouMight">
+    <h2 class="ChanteFont">You might not get a second change<span class="amp2">DONT FUCK UP</span></h2>
+  </div>
+</article>
+<section class="DiveIt">
+  <div class="ContenedorSection">
+    <div><h2 class="ChanteFont Letter">Wake up, and get sh*t done.</h2></div>
+    <div><p class="ChanteFont Letter">Doesnt matter if you just did one thing, doesnt matter if you did 10 things.</p></div>
+    <div>
+      <p class="ChanteFont Letter">What matters is that you went through the motions regardless of how you felt when you woke up, and that simple action of *going through the motions* is what gets you one step closer to what you re trying to achieve.</p>
+    </div>
+    <div><a href="https://www.instagram.com/p/Cl6X_lju26r/" target="blank">IG</a></div>
+  </div>
+</section>
+<footer class="FooterFin">
+  <div class="CajaFooter">
+    <div class="ChildFooter">
+      <ul>
+        <h2>Contact</h2>
+        <li>Infor@therunt.com</li>
+        <li>Instagram</li>
+        <li>1-234-5678</li>
+        <li>© WAKEUP, 2023. All rights reserved</li>
+      </ul>
+    </div>
+    <div class="ChildFooter">
+      <ul>
+        <h2>Ways to Give</h2>
+        <li>Forms</li>
+        <li>Text Giving</li>
+        <li>Mobile App Giving</li>
+        <li>Giving</li>
+      </ul>
+    </div>
+    <div class="ChildFooter">
+      <ul>
+        <h2>Help & Support</h2>
+        <li>Q&A</li>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script>
+  $('.ml11 .letters').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+
+  ml.timelines["ml11"] = anime.timeline({loop: true})
+    .add({
+      targets: '.ml11 .line',
+      scaleY: [0,1],
+      opacity: [0.1,1],
+      easing: "easeOutExpo",
+      duration: 700
+    })
+    .add({
+      targets: '.ml11 .line',
+      translateX: [0,$(".ml11 .letters").width()],
+      easing: "easeOutExpo",
+      duration: 700,
+      delay: 500
+    }).add({
+      targets: '.ml11 .had-r1 ',
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 5000,
+      offset: '-=775',
+      delay: function(el, i) {
+        return 34 * (i+1)
+      }
+    }).add({
+      targets: '.ml11',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 500
+    });
+</script>
+</body>
+</html>
